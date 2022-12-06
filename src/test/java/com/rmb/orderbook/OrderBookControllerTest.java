@@ -33,17 +33,17 @@ public class OrderBookControllerTest {
         List<Orders> ordersList = ordersResponse.getOrders();
         System.out.println(ordersResponse.toString());
         assertNotNull(ordersResponse.getOrders());
-        assertEquals(2, ordersList.size());
+        assertEquals(1, ordersList.size());
     }
 
     @Test
     @Order(2)
     public void getSellOrderBySideAndPriority_Success(){
-        ordersResponse =  orderBookController.getOrders(100L, "Sell");
+        ordersResponse =  orderBookController.getOrders(700L, "Sell");
         List<Orders> ordersList = ordersResponse.getOrders();
         System.out.println(ordersResponse.toString());
         assertNotNull(ordersResponse.getOrders());
-        assertEquals(2, ordersList.size());
+        assertEquals(1, ordersList.size());
     }
 
     @Test
@@ -73,7 +73,7 @@ public class OrderBookControllerTest {
     @Test
     @Order(5)
     public void modifyBuyOrderBySideAndPriority_Success() {
-        ordersResponse = orderBookController.updateOrder("A647342", 6L);
+        ordersResponse = orderBookController.updateOrder("A647336", 3L);
         List<Orders> ordersList = ordersResponse.getOrders();
         assertNotNull(ordersResponse.getOrders());
     }
@@ -81,7 +81,7 @@ public class OrderBookControllerTest {
   @Test
     @Order(6)
     public void modifySellOrderBySideAndPriority_Success() {
-        ordersResponse = orderBookController.updateOrder("A647343", 6L);
+        ordersResponse = orderBookController.updateOrder("A647337", 3L);
         List<Orders> ordersList = ordersResponse.getOrders();
         System.out.println(ordersResponse.toString());
         assertNotNull(ordersResponse.getOrders());
@@ -91,10 +91,10 @@ public class OrderBookControllerTest {
     @Test
     @Order(7)
     public void removeBuyOrderBySideAndPriority_Success() {
-        ordersResponse = orderBookController.deleteOrder("A647342");
+        ordersResponse = orderBookController.deleteOrder("A647335");
         List<Orders> ordersList = ordersResponse.getOrders();
         assertNotNull(ordersResponse.getOrders());
-        assertEquals(10, ordersList.size());
+        assertEquals(6, ordersList.size());
     }
 
     @Test
@@ -103,7 +103,7 @@ public class OrderBookControllerTest {
         ordersResponse = orderBookController.deleteOrder("A647338");
         List<Orders> ordersList = ordersResponse.getOrders();
         assertNotNull(ordersResponse.getOrders());
-        assertEquals(10, ordersList.size());
+        assertEquals(6, ordersList.size());
     }
 
 

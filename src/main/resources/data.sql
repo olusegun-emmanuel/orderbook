@@ -5,26 +5,19 @@ CREATE TABLE orders (
   orderId VARCHAR(250) NOT NULL,
   price int(10) NOT NULL,
   quantity int(10) NOT NULL,
-  side VARCHAR(250) NOT NULL
+  side VARCHAR(10) NOT NULL,
+  status VARCHAR(30) NOT NULL
 );
 
 INSERT INTO orders  VALUES
-  (1,'A647334','100','2', 'Buy');
+  (1,'A647334','100','2','Buy','New');
 INSERT INTO orders  VALUES
-  (2,'A647335','150','1', 'Buy');
+  (2,'A647335','200','1','Buy','New');
 INSERT INTO orders  VALUES
-  (3,'A647336','190','3', 'Buy');
+  (3,'A647336','300','3','Buy','New');
 INSERT INTO orders  VALUES
-  (4,'A647337','100','2', 'Buy');
+  (4,'A647337','500','2','Sell','New');
 INSERT INTO orders  VALUES
-  (5,'A647338','101','3', 'Sell');
+  (5,'A647338','600','3','Sell','New');
 INSERT INTO orders  VALUES
-  (6,'A647339','100','4', 'Sell');
-INSERT INTO orders  VALUES
-  (7,'A647340','120','3', 'Sell');
-INSERT INTO orders  VALUES
-  (8,'A647341','150','2', 'Sell');
-INSERT INTO orders  VALUES
-  (9,'A647342','110','3', 'Buy');
-INSERT INTO orders  VALUES
-  (10,'A647343','100','2', 'Sell');
+  (6,'A647339','700','4','Sell','New');

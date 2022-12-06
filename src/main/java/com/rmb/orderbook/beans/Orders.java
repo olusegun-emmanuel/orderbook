@@ -15,6 +15,8 @@ public class Orders {
     private Long quantity;
     private String side;
 
+    private String status;
+
     public void setId(int id) {
         this.id = id;
     }
@@ -55,12 +57,21 @@ public class Orders {
         this.side = side;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public Orders(){}
 
-    public Orders(String orderId, Long price, Long quantity, String side) {
+    public Orders(String orderId, Long price, Long quantity, String side, String status) {
         this.orderId = orderId;
         this.price = price;
         this.quantity = quantity;
         this.side = side;
+        this.status = status;
     }
 }
